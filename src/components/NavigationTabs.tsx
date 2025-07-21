@@ -1,4 +1,4 @@
-import { Activity, BarChart3, Map, Settings } from "lucide-react";
+import { Activity, BarChart3, Map, Settings, Brain } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 interface NavigationTabsProps {
@@ -11,7 +11,7 @@ export default function NavigationTabs({ activeTab, onTabChange }: NavigationTab
     <div className="sticky top-16 z-40 bg-background/80 backdrop-blur-sm border-b">
       <div className="container mx-auto px-4 py-3">
         <Tabs value={activeTab} onValueChange={onTabChange} className="w-full">
-          <TabsList className="grid w-full grid-cols-4 h-12">
+          <TabsList className="grid w-full grid-cols-5 h-12">
             <TabsTrigger value="dashboard" className="flex items-center gap-2">
               <Activity className="h-4 w-4" />
               <span className="hidden sm:inline">Dashboard</span>
@@ -19,6 +19,10 @@ export default function NavigationTabs({ activeTab, onTabChange }: NavigationTab
             <TabsTrigger value="analytics" className="flex items-center gap-2">
               <BarChart3 className="h-4 w-4" />
               <span className="hidden sm:inline">Analytics</span>
+            </TabsTrigger>
+            <TabsTrigger value="prediction" className="flex items-center gap-2">
+              <Brain className="h-4 w-4" />
+              <span className="hidden sm:inline">ML Prediction</span>
             </TabsTrigger>
             <TabsTrigger value="map" className="flex items-center gap-2">
               <Map className="h-4 w-4" />

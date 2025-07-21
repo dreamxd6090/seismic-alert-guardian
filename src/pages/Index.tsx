@@ -3,6 +3,7 @@ import EarthquakeHeader from "@/components/EarthquakeHeader";
 import NavigationTabs from "@/components/NavigationTabs";
 import EarthquakeDashboard from "@/components/EarthquakeDashboard";
 import EarthquakeAnalytics from "@/components/EarthquakeAnalytics";
+import EarthquakePrediction from "@/components/EarthquakePrediction";
 import EarthquakeMap from "@/components/EarthquakeMap";
 import EarthquakeSettings from "@/components/EarthquakeSettings";
 
@@ -15,6 +16,8 @@ const Index = () => {
         return <EarthquakeDashboard />;
       case "analytics":
         return <EarthquakeAnalytics />;
+      case "prediction":
+        return <EarthquakePrediction />;
       case "map":
         return <EarthquakeMap />;
       case "settings":
